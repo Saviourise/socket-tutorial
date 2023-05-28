@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Raleway:wght@400;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 5px;
+}
+
+.alertMsg {
+  font-size: 16px;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  display: none;
+}
+
+.login-form h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.login-form h2 svg {
+  font-size: 40px;
+}
+
+.login-form input {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.login-form select {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.login-form button {
+  font-size: 16px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.chat-room-container {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 100px;
+  border-radius: 5px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.top-bar h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar a {
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.chat-room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 300px;
+}
+
+.chat-room div {
+  flex: 1;
+}
+
+.chat-room .single-chat-room {
+  flex: 3;
+  height: 100%;
+  position: relative;
+}
+
+.single-chat-room h2 {
+  text-align: center;
+  padding: 5px;
+}
+
+.chat-room .single-chat-room form {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.chat-room .single-chat-room form input {
+  width: 75%;
+  padding: 8px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: none;
+}
+.chat-room .single-chat-room form button {
+  padding: 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 25%;
+  cursor: pointer;
+}
+
+.chat-room .all-rooms {
+  margin-right: 20px;
+  height: 100%;
+}
+
+.chat-room .all-rooms ul h3,
+.chat-room .all-rooms ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.chat-room .room-users {
+  margin-left: 20px;
+  height: 100%;
+}
+
+.chat-room .room-users ul h3,
+.chat-room .room-users ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.messages {
+  height: 227px;
+  overflow-y: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: none;
+}
+.single-message {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}

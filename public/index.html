@@ -4,50 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello world</h1>
-    <form action="">
-      <input type="text" name="message" />
-      <button>submit</button>
+    <form class="login-form">
+      <h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+        >
+          <g fill="currentColor">
+            <path
+              d="m4 19l-.93-.37a1 1 0 0 0 1.125 1.35L4 19zm4.706-.936l.474-.881l-.317-.17l-.352.07l.195.98zm-3.082-3.147l.93.37l.163-.414l-.196-.399l-.897.443zM19 12c0 3.246-2.853 6-6.53 6v2c4.641 0 8.53-3.514 8.53-8h-2zM5.941 12c0-3.246 2.854-6 6.53-6V4C7.83 4 3.94 7.514 3.94 12h2zm6.53-6C16.147 6 19 8.754 19 12h2c0-4.486-3.889-8-8.53-8v2zm0 12c-1.205 0-2.328-.3-3.291-.817l-.948 1.761A8.934 8.934 0 0 0 12.471 20v-2zm-8.276 1.98l4.706-.936l-.39-1.961l-4.706.936l.39 1.962zm2.326-5.506A5.564 5.564 0 0 1 5.94 12h-2c0 1.2.282 2.338.786 3.36l1.794-.886zm-1.826.073L3.07 18.631l1.858.738l1.624-4.083l-1.858-.739z"
+            />
+            <circle cx="9" cy="12" r="1" />
+            <circle cx="12.5" cy="12" r="1" />
+            <circle cx="16" cy="12" r="1" />
+          </g>
+        </svg>
+        <span>LetChat</span>
+      </h2>
+      <div class="alertMsg">Please fill all fields</div>
+      <input
+        type="text"
+        name="username"
+        placeholder="Please enter your username..."
+      />
+      <select name="roomname" id="">
+        <option value="JavaScript">JavaScript</option>
+        <option value="React-Js">React-Js</option>
+        <option value="Python">Python</option>
+        <option value="PHP">PHP</option>
+        <option value="GitHub">GitHub</option>
+      </select>
+      <button>Join Room</button>
     </form>
-    <div>
-      <h1>Messages</h1>
-      <div class="message"></div>
-    </div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
-  <script>
-    const socket = io();
-    socket.on("message", (message) => {
-      showMessageOnDOM(message);
-    });
-
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (!form.message.value) {
-        alert("please enter a message");
-      } else {
-        socket.emit("chatMessage", form.message.value);
-        form.message.value = "";
-        form.message.focus();
-      }
-    });
-
-    const messageBox = document.querySelector(".message");
-
-    function showMessageOnDOM(message) {
-      const div = document.createElement("div");
-      div.innerHTML = `
-        <div>
-          <small>${new Date().toDateString()}</small>
-          <p>${message}</p>
-        </div>
-      `;
-      messageBox.appendChild(div);
-    }
-  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+    integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="/js/index.js"></script>
 </html>
